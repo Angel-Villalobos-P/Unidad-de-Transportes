@@ -1,0 +1,72 @@
+[
+  {
+    "Nombre": "Mario Rodriguez Salazar",
+    "Cedula": "11374-0320",
+    "Direccion": "0000",
+    "Correo": "salazar14@gmail.com",
+    "Telefono": "88796524"
+  },
+  {
+    "Nombre": "Marta Nuñez Bolivar",
+    "Cedula": "11374-0458",
+    "Direccion": "0000",
+    "Correo": "bolivarM@gmail.com",
+    "Telefono": "88765245"
+  },
+  {
+    "Nombre": "Tatiana Cruz Chinchilla",
+    "Cedula": "11374-0457",
+    "Direccion": "0000",
+    "Correo": "tatiana36@gmail.com",
+    "Telefono": "88201478"
+  },
+  {
+    "Nombre": "Esteban Aguilar Villalobos",
+    "Cedula": "11374-0754",
+    "Direccion": "0000",
+    "Correo": "aguilar15@gmail.com",
+    "Telefono": "88653478"
+  },
+  {
+    "Nombre": "Alexandra Rodriguez Mata",
+    "Cedula": "11374-6548",
+    "Direccion": "0000",
+    "Correo": "mata84@gmail.com",
+    "Telefono": "83651475"
+  },
+  {
+    "Nombre": "Bryan Montero Rojas",
+    "Cedula": "17804-7458",
+    "Direccion": "0000",
+    "Correo": "monteroRojas@gmail.com",
+    "Telefono": "84758245"
+  },
+  {
+    "Nombre": "Estafanie Calderon Villalobos",
+    "Cedula": "15404-7978",
+    "Direccion": "0000",
+    "Correo": "tefacalderon@gmail.com",
+    "Telefono": "85569785"
+  },
+  {
+    "Nombre": "Karla Bent Soto",
+    "Cedula": "17804-8795",
+    "Direccion": "0000",
+    "Correo": "karlaBent@gmail.com",
+    "Telefono": "84758245"
+  },
+  {
+    "Nombre": "Valeria Blanco Aguilar",
+    "Cedula": "11103-7458",
+    "Direccion": "0000",
+    "Correo": "valeAguilar@gmail.com",
+    "Telefono": "87951236"
+  },
+  {
+    "Nombre": "Jeremy Lopez Mena",
+    "Cedula": "17804-0002",
+    "Direccion": "0000",
+    "Correo": "lopez4156@gmail.com",
+    "Telefono": "888201456"
+  }
+]
