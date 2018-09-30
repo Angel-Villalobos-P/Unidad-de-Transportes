@@ -1,0 +1,14 @@
+{
+	"funcionarios": [{
+			"administrador": {
+				"username": "administrador",
+				"password": "123admin!"
+			}
+		},
+		{
+			"secretaria": {
+				"username": "",
+				"password": ""
+			}
+		}
+	]
