@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package funciones;
 
 import com.google.gson.JsonArray;
@@ -16,14 +12,15 @@ import java.io.FileReader;
  * @author M Fer
  */
 public class ReaderJSON {
-    public void main(String nombre) throws java.io.IOException {
+    public void Reader(String nombre) throws java.io.IOException {
 	
 	        JsonParser parser = new JsonParser();
 	        FileReader fr = new FileReader(nombre+".json");
 	        JsonElement datos = parser.parse(fr);
 	        dumpJSONElement(datos);
 	    }
-	
+	//Se tendría que hacer una por JSON
+    
 	public static void dumpJSONElement(JsonElement elemento) {
 	JsonArray array = elemento.getAsJsonArray();
 	
