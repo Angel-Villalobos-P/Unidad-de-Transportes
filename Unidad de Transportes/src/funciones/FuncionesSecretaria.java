@@ -14,7 +14,7 @@ import clases.Persona;
  */
 public class FuncionesSecretaria {
     
-    public void registrarPasajero(String pNombre, String pCedula, Direccion pDireccion, String pCorreo, String pTelefono){
+    public String registrarPasajero(String pNombre, String pCedula, Direccion pDireccion, String pCorreo, String pTelefono){
         for(int elemento=0; elemento <= pasajeros.size()-1; elemento++){
             Persona pasajero= pasajeros.get(elemento);
             if(pCedula==pasajero.getCedula() ){
