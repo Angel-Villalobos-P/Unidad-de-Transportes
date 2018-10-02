@@ -15,7 +15,8 @@ public class Chofer {
     public ArrayList<Licencia> getLicencia() {
         return licencia;
     }
-    public void setLicencia(ArrayList<Licencia> pLicencia) {
-        licencia = pLicencia;
+    public void agregarLicencia(int numero, String fechaEmision, String tipo, String fechaExpiracion) {
+        Licencia licenciaNueva=new Licencia(numero,fechaEmision,tipo,fechaExpiracion);
+        licencia.add(licenciaNueva);
     }
 }

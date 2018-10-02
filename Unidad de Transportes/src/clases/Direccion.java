@@ -7,11 +7,11 @@ public class Direccion {
     private String señas;
     private String direccionCompleta;
 
-    public Direccion(String pProvincia, String pCanton, String pDistrito, String pSeñas){
-        setProvincia(pProvincia);
-        setCanton(pCanton);
-        setDistrito(pDistrito);
-        setSeñas(pSeñas);
+    public Direccion(String provincia, String canton, String distrito, String señas) {
+        this.provincia = provincia;
+        this.canton = canton;
+        this.distrito = distrito;
+        this.señas = señas;
     }
 
     public String getProvincia() {

@@ -11,15 +11,16 @@ public class Funcionario {
     private ArrayList<Funcionario> administrador;
     private ArrayList<Funcionario> secretaria;
 
-    public Funcionario(String pNombreCompleto, String pDepartamento, String pUsername, String pTelefono, String pPassword) {
-        setNombreCompleo(pNombreCompleto);
-        setDepartamento(pDepartamento);
-        setUsername(pUsername);
-        setTelefono(pTelefono);
-        setPassword(pPassword);
-
+    public Funcionario(String nombreCompleo, String departamento, String username, String telefono, String password, String tipo) {
+        this.nombreCompleo = nombreCompleo;
+        this.departamento = departamento;
+        this.username = username;
+        this.telefono = telefono;
+        this.password = password;
+        this.tipo = tipo;
     }
 
+    
     public String getNombreCompleo() {
         return nombreCompleo;
     }
