@@ -17,7 +17,7 @@ public class Vehiculo {
     private int vin;
     private String sede;
     private String estado;
-    //private ArrayList<Mantenimiento> mantenimiento;
+    private ArrayList<Mantenimiento> mantenimiento;
 
     public Vehiculo(String placa, String annoFabricacion, String color, String marca, int capacidad, float kilometraje, int vin, String sede, String estado) {
         this.placa = placa;
@@ -102,6 +102,13 @@ public class Vehiculo {
     public void setEstado(String estado) {
         this.estado = estado;
     }
-    
-    
+    public void agregarMantenimiento(String pIdeServicio,String pFechaInicio,String pFechaFinal,float pMonto,String pActividad,boolean pTipoServicio){
+         Mantenimiento mantenimientoNuevo=new Mantenimiento(pIdeServicio,pFechaInicio,pFechaFinal,pMonto,pActividad,pTipoServicio);
+         mantenimiento.add(mantenimientoNuevo);
+    }
+
+    public ArrayList<Mantenimiento> getMantenimiento() {
+        return mantenimiento;
+    }
+
 }

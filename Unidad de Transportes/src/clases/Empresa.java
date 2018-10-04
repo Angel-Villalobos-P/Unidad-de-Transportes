@@ -9,13 +9,13 @@ public class Empresa {
     private String razonSocial;
     private String cedulaJuridica;
     private String telefono;
-    private String direccion;
+    private Direccion direccion;
 
-    public Empresa(String razonSocial, String cedulaJuridica, String telefono, String direccion) {
+    public Empresa(String razonSocial, String cedulaJuridica, String telefono) {
         this.razonSocial = razonSocial;
         this.cedulaJuridica = cedulaJuridica;
         this.telefono = telefono;
-        this.direccion = direccion;
+        
     }
 
     public String getRazonSocial() {
@@ -42,14 +42,11 @@ public class Empresa {
         this.telefono = telefono;
     }
 
-    public String getDireccion() {
+    public Direccion getDireccion() {
         return direccion;
     }
 
-    public void setDireccion(String direccion) {
+    public void setDireccion(Direccion direccion) {
         this.direccion = direccion;
     }
-    
-    
-    
 }
