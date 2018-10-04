@@ -4,9 +4,6 @@
  * and open the template in the editor.
  */
 package funciones;
-import clases.Direccion;
-import clases.Persona;
-
 
 /**
  *
@@ -14,18 +11,8 @@ import clases.Persona;
  */
 public class FuncionesSecretaria {
     
-    public String registrarPasajero(String pNombre, String pCedula, Direccion pDireccion, String pCorreo, String pTelefono){
-        for(int elemento=0; elemento <= pasajeros.size()-1; elemento++){
-            Persona pasajero= pasajeros.get(elemento);
-            if(pCedula==pasajero.getCedula() ){
-                return ("Error, esiste una coincidencia de cédula con un pasajero previamente registrado");
-
-            }
-        }
-        Persona pasajero= new Persona(pNombre, pCedula, pDireccion, pCorreo, pTelefono);
-        pasajeros.add(pasajero);
-        return "El pasajero se ha registrado con éxito";
-
+    public void registrarPasajero(){
+        
     }
     
     public void solicitarServicioDeViaje(){

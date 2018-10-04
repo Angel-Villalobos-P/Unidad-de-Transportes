@@ -10,29 +10,27 @@ package clases;
  * @author M Fer
  */
 public final class Mantenimiento {
-    private String ideServicio;
+     private String ideServicio;
     private String fechaInicio;
     private String fechaFinal;
     private float monto;
     private String actividad;
     private boolean tipoServicio;
-    private Empresa empresa;
-
-    public Mantenimiento(String ideServicio, String fechaInicio, String fechaFinal, float monto, String actividad, boolean tipoServicio) {
-        this.ideServicio = ideServicio;
-        this.fechaInicio = fechaInicio;
-        this.fechaFinal = fechaFinal;
-        this.monto = monto;
-        this.actividad = actividad;
-        this.tipoServicio = tipoServicio;
+    //private Empresa empresa;
+    public Mantenimiento(String pIdeServicio,String pFechaInicio,String pFechaFinal,float pMonto,String pActividad,boolean pTipoServicio){
+        setIdeServicio(pIdeServicio);
+        setFechaInicio(pFechaInicio);
+        setFechaFinal(pFechaFinal);
+        setMonto(pMonto);
+        setActividad(pActividad);
+        setTipoServicio(pTipoServicio);
     }
-    
     public String getIdeServicio() {
         return ideServicio;
     }
 
     public void setIdeServicio(String pIdeServicio) {
-        ideServicio = pIdeServicio;
+        this.ideServicio = pIdeServicio;
     }
 
     public String getFechaInicio() {
@@ -40,7 +38,7 @@ public final class Mantenimiento {
     }
 
     public void setFechaInicio(String pFechaInicio) {
-        fechaInicio = pFechaInicio;
+        this.fechaInicio = pFechaInicio;
     }
 
     public String getFechaFinal() {
@@ -48,7 +46,7 @@ public final class Mantenimiento {
     }
 
     public void setFechaFinal(String pFechaFinal) {
-        fechaFinal = pFechaFinal;
+        this.fechaFinal = pFechaFinal;
     }
 
     public float getMonto() {
@@ -56,7 +54,7 @@ public final class Mantenimiento {
     }
 
     public void setMonto(float pMonto) {
-        monto = pMonto;
+        this.monto = pMonto;
     }
 
     public String getActividad() {
@@ -64,7 +62,7 @@ public final class Mantenimiento {
     }
 
     public void setActividad(String pActividad) {
-        actividad = pActividad;
+        this.actividad = pActividad;
     }
 
     public boolean getTipoServicio() {
@@ -72,14 +70,8 @@ public final class Mantenimiento {
     }
 
     public void setTipoServicio(boolean pTipoServicio) {
-        tipoServicio = pTipoServicio;
+        this.tipoServicio = pTipoServicio;
     }
-
-    public Empresa getEmpresa() {
-        return empresa;
-    }
-
-    public void setEmpresa(Empresa empresa) {
-        this.empresa = empresa;
-    }
+    
+    
 }
