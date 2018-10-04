@@ -12,12 +12,14 @@ import java.io.FileReader;
  * @author M Fer
  */
 public class ReaderJSON {
-    public void Reader(String nombre) throws java.io.IOException {
+    public JsonArray Reader(String nombre) throws java.io.IOException {
 	
 	        JsonParser parser = new JsonParser();
 	        FileReader fr = new FileReader(nombre+".json");
 	        JsonElement datos = parser.parse(fr);
-	        dumpJSONElement(datos);
+	        //dumpJSONElement(datos);
+                JsonArray array = datos.getAsJsonArray();
+                return array;
 	    }
 	//Se tendría que hacer una por JSON
     
