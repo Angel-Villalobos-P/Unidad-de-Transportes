@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package clases;
 
 import java.util.ArrayList;
@@ -13,7 +9,7 @@ import java.util.Date;
  * @author M Fer
  */
 public final class Viaje {
-      private String puntoSalida;
+    private String puntoSalida;
     private String fechaInicio;
     private String horaInicio;
     private ArrayList<Object> pasajeros;//Nose que tipo es ya que se saca del JSON los pasajeros, agregar al constructor 
@@ -24,16 +20,16 @@ public final class Viaje {
     private int kmFinal;
     private String estado;
     private Date fechaSolicitud;
-    
-    public Viaje (String pPuntoSalida,String pFechaInicio,String pHoraInicio,String pHoraFinal,String pDestino,int pKmInicial,int pKmFinal,String pEstado){
-        setPuntoSalida(pPuntoSalida);
-        setFechaInicio(pFechaInicio);
-        setHoraInicio(pHoraInicio);
-        setHoraFinal(pHoraFinal);
-        setDestino(pDestino);
-        setKmInicial(pKmInicial);
-        setKmFinal(pKmFinal);
-        setEstado(pEstado);
+
+    public Viaje(String puntoSalida, String fechaInicio, String horaInicio, String horaFinal, String destino, String chofer, int kmInicial, int kmFinal, String estado) {
+        this.puntoSalida = puntoSalida;
+        this.fechaInicio = fechaInicio;
+        this.horaInicio = horaInicio;
+        this.horaFinal = horaFinal;
+        this.destino = destino;
+        this.kmInicial = kmInicial;
+        this.kmFinal = kmFinal;
+        this.estado = estado;
     }
     
     public String getPuntoSalida() {
@@ -41,7 +37,7 @@ public final class Viaje {
     }
 
     public void setPuntoSalida(String pPuntoSalida) {
-        this.puntoSalida = pPuntoSalida;
+        puntoSalida = pPuntoSalida;
     }
 
     public String getFechaInicio() {
@@ -49,7 +45,7 @@ public final class Viaje {
     }
 
     public void setFechaInicio(String pFechaInicio) {
-        this.fechaInicio = pFechaInicio;
+        fechaInicio = pFechaInicio;
     }
 
     public String getHoraInicio() {
@@ -57,7 +53,7 @@ public final class Viaje {
     }
 
     public void setHoraInicio(String pHoraInicio) {
-        this.horaInicio = pHoraInicio;
+        horaInicio = pHoraInicio;
     }
 
     public ArrayList<Object> getPasajeros() {
@@ -65,7 +61,7 @@ public final class Viaje {
     }
 
     public void setPasajeros(ArrayList<Object> pPasajeros) {
-        this.pasajeros = pasajeros;//Se debe cambiar sacando los pasajeros
+        pasajeros = pasajeros;//Se debe cambiar sacando los pasajeros
     }
 
     public String getHoraFinal() {
@@ -73,7 +69,7 @@ public final class Viaje {
     }
 
     public void setHoraFinal(String pHoraFinal) {
-        this.horaFinal = pHoraFinal;
+        horaFinal = pHoraFinal;
     }
 
     public String getDestino() {
@@ -81,7 +77,7 @@ public final class Viaje {
     }
 
     public void setDestino(String pDestino) {
-        this.destino = pDestino;
+        destino = pDestino;
     }
 
     public String getChofer() {
@@ -89,7 +85,7 @@ public final class Viaje {
     }
 
     public void setChofer(String chofer) {
-        this.chofer = chofer; // Sacar el chofer de los registrados
+        chofer = chofer; // Sacar el chofer de los registrados
     }
 
     public int getKmInicial() {
@@ -97,7 +93,7 @@ public final class Viaje {
     }
 
     public void setKmInicial(int pKmInicial) {
-        this.kmInicial = pKmInicial;
+        kmInicial = pKmInicial;
     }
 
     public int getKmFinal() {
@@ -105,7 +101,7 @@ public final class Viaje {
     }
 
     public void setKmFinal(int pKmFinal) {
-        this.kmFinal = pKmFinal;
+        kmFinal = pKmFinal;
     }
 
     public String getEstado() {
@@ -121,6 +117,6 @@ public final class Viaje {
     }
 
     public void setFechaSolicitud(Date pFechaSolicitud) {
-        this.fechaSolicitud = pFechaSolicitud;
+        fechaSolicitud = pFechaSolicitud;
     }
 }

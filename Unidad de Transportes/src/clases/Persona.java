@@ -8,11 +8,11 @@ package clases;
 public class Persona {
     private String nombre;
     private String cedula;
-    //private Direccion direccion;
+    private Direccion direccion;
     private String correo;
     private String telefono;
 
-    public Persona(String nombre, String cedula, String correo, String telefono) {
+    public Persona(String nombre, String cedula, Direccion direccion, String correo, String telefono) {
         this.nombre = nombre;
         this.cedula = cedula;
         this.correo = correo;
@@ -49,6 +49,14 @@ public class Persona {
 
     public void setTelefono(String telefono) {
         this.telefono = telefono;
+    }
+
+    public Direccion getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(Direccion direccion) {
+        this.direccion = direccion;
     }
     
     
