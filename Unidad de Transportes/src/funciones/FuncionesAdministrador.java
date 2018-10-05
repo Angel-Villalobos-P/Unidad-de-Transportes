@@ -17,7 +17,7 @@ public class FuncionesAdministrador {
     public String registrarChofer(String pNombre, String pCedula, String pCorreo, String pTelefono,String pProvincia,String pCanton,String pDistrito,String pSeñas
     ,int numero, String fechaEmision, String tipo, String fechaExpiracion) throws IOException{
         ReaderJSON datos=new ReaderJSON();
-        JsonArray pasajeros= datos.Reader("Chofer");
+        JsonArray choferes= datos.Reader("Chofer");
        //Verificar si no esta registrado
         Direccion direccion=new Direccion(pProvincia,pCanton, pDistrito, pSeñas);
         Persona info=new Persona(pNombre,pCedula,direccion,pCorreo,pTelefono);
@@ -25,15 +25,22 @@ public class FuncionesAdministrador {
         
         Gson gson=new Gson();
         String obj = gson.toJson(nuevoChofer);
-        pasajeros.add(obj);
-        datos.EscribirJson("Chofer",pasajeros);
+        choferes.add(obj);
+        datos.EscribirJson("Chofer",choferes);
         return "El Chofer se ha registrado con éxito";
     }
     
-    public void registrarVehiculo(String pPlaca, String pAnnoFabricacion, String pColor, String pMarca, int pCapacidad, float pKilometraje, int pVin, String pSede, String pEstado){
-        //Verificar si no está registrado
-        Vehiculo nuevoVehiculo= new Vehiculo(pPlaca,pAnnoFabricacion,pColor,pMarca,pCapacidad,pKilometraje,pVin,pSede, pEstado);
-        //Agregar el vehiculo al JSON
+    public void registrarVehiculo(String pPlaca, String pAnnoFabricacion, String pColor, String pMarca, int pCapacidad, float pKilometraje, int pVin, String pSede) throws IOException{
+        ReaderJSON datos=new ReaderJSON();
+        JsonArray vehiculos= datos.Reader("Vehiculos");
+//Verificar si no está registrado
+        
+        Vehiculo nuevoVehiculo= new Vehiculo(pPlaca,pAnnoFabricacion,pColor,pMarca,pCapacidad,pKilometraje,pVin,pSede,"Servicio");
+        Gson gson=new Gson();
+        String obj = gson.toJson(nuevoVehiculo);
+        vehiculos.add(obj);
+        datos.EscribirJson("Vehiculos",vehiculos);
+        
     }
     
     public void listarViajes(){
