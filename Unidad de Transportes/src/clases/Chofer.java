@@ -6,9 +6,9 @@ public class Chofer {
     private Persona datos;
     private ArrayList<Licencia> licencia;
 
-    public Chofer(Persona datos,int numero, String fechaEmision, String tipo, String fechaExpiracion) {
+    public Chofer(Persona datos) {
         this.datos = datos;
-        agregarLicencia(numero,fechaEmision,tipo,fechaExpiracion);
+        licencia=new ArrayList<Licencia>();
     }
     
     
@@ -21,8 +21,8 @@ public class Chofer {
     public ArrayList<Licencia> getLicencia() {
         return licencia;
     }
-    public void agregarLicencia(int numero, String fechaEmision, String tipo, String fechaExpiracion) {
-        Licencia licenciaNueva=new Licencia(numero,fechaEmision,tipo,fechaExpiracion);
+    public void agregarLicencia(Licencia licenciaNueva) {
+        //Licencia licenciaNueva=new Licencia(numero,fechaEmision,tipo,fechaExpiracion);esto se agrega en el main
         licencia.add(licenciaNueva);
     }
 }

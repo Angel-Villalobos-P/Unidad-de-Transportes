@@ -29,6 +29,7 @@ public class Vehiculo {
         this.vin = vin;
         this.sede = sede;
         this.estado = estado;
+        mantenimiento=new ArrayList<Mantenimiento>();
     }
 
     public String getPlaca() {
@@ -102,9 +103,9 @@ public class Vehiculo {
     public void setEstado(String estado) {
         this.estado = estado;
     }
-    public void agregarMantenimiento(String pIdeServicio,String pFechaInicio,String pFechaFinal,float pMonto,String pActividad,boolean pTipoServicio){
-         Mantenimiento mantenimientoNuevo=new Mantenimiento(pIdeServicio,pFechaInicio,pFechaFinal,pMonto,pActividad,pTipoServicio);
-         mantenimiento.add(mantenimientoNuevo);
+    public void agregarMantenimiento(/*String pIdeServicio,String pFechaInicio,String pFechaFinal,float pMonto,String pActividad,boolean pTipoServicio*/ Mantenimiento pMantenimiento){
+         //Mantenimiento mantenimientoNuevo=new Mantenimiento(pIdeServicio,pFechaInicio,pFechaFinal,pMonto,pActividad,pTipoServicio);
+         mantenimiento.add(pMantenimiento);
     }
 
     public ArrayList<Mantenimiento> getMantenimiento() {
