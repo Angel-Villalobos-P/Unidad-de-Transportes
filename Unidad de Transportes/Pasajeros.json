@@ -14,25 +14,25 @@
     "Telefono": "88765245"
   },
   {
-    "Nombre": "Tatiana Cruz Chinchilla",
-    "Cedula": "11374-0457",
-    "Direccion": "0000",
-    "Correo": "tatiana36@gmail.com",
-    "Telefono": "88201478"
+    "nombre": "Tatiana Cruz Chinchilla",
+    "cedula": "11374-0457",
+    "direccion": "0000",
+    "correo": "tatiana36@gmail.com",
+    "telefono": "88201478"
   },
   {
-    "Nombre": "Esteban Aguilar Villalobos",
-    "Cedula": "11374-0754",
-    "Direccion": "0000",
-    "Correo": "aguilar15@gmail.com",
-    "Telefono": "88653478"
+    "nombre": "Esteban Aguilar Villalobos",
+    "cedula": "11374-0754",
+    "direccion": "0000",
+    "correo": "aguilar15@gmail.com",
+    "telefono": "88653478"
   },
   {
-    "Nombre": "Alexandra Rodriguez Mata",
-    "Cedula": "11374-6548",
-    "Direccion": "0000",
-    "Correo": "mata84@gmail.com",
-    "Telefono": "83651475"
+    "nombre": "Alexandra Rodriguez Mata",
+    "cedula": "11374-6548",
+    "direccion": "0000",
+    "correo": "mata84@gmail.com",
+    "telefono": "83651475"
   },
   {
     "Nombre": "Bryan Montero Rojas",

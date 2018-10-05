@@ -6,6 +6,12 @@ public class Chofer {
     private Persona datos;
     private ArrayList<Licencia> licencia;
 
+    public Chofer(Persona datos,int numero, String fechaEmision, String tipo, String fechaExpiracion) {
+        this.datos = datos;
+        agregarLicencia(numero,fechaEmision,tipo,fechaExpiracion);
+    }
+    
+    
     public Persona getDatos() {
         return datos;
     }
