@@ -16,6 +16,7 @@ public class FuncionesAdministrador {
     
     public String registrarChofer(String pNombre, String pCedula, String pCorreo, String pTelefono,String pProvincia,String pCanton,String pDistrito,String pSeñas
     ,int numero, String fechaEmision, String tipo, String fechaExpiracion) throws IOException{
+        
         ReaderJSON datos=new ReaderJSON();
         JsonArray choferes= datos.Reader("Chofer");
        //Verificar si no esta registrado
