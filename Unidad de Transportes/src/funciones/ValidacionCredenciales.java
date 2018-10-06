@@ -39,19 +39,16 @@ public class ValidacionCredenciales {
         return password;
     }
     
-    public boolean aceptarUsuario(){        
-        while(aceptado == false){
+    public boolean aceptarUsuario(){   
             for (Object o: datos){
             info = (JsonObject) o;
             String user = (String) info.get("username").getAsString();
             String passw = (String) info.get("password").getAsString();
             
-            //if(getUsername().equals(user) && getPassword().equals(passw)){
-              //  this.aceptado = true;
-            //}
-            aceptado = (user.equals(username) && this.paš.equals(passw));
+            this.aceptado = (getUsername().equals(user)) && (getPassword().equals(passw));
+                //this.aceptado = (user.equals(username) && passw.equals(password));
         }
-    }   return aceptado;
-}
+        return aceptado;
+    }
     
 }
