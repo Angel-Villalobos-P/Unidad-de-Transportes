@@ -38,7 +38,7 @@ public class MenuAdministrador extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(33, 33, 33));
+        jPanel1.setBackground(new java.awt.Color(0, 102, 153));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Lucida Sans", 0, 24)); // NOI18N
@@ -48,7 +48,6 @@ public class MenuAdministrador extends javax.swing.JFrame {
 
         jButton1.setBackground(new java.awt.Color(0, 139, 116));
         jButton1.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Consultar datos");
         jButton1.setActionCommand("");
         jButton1.setBorder(null);
@@ -57,17 +56,20 @@ public class MenuAdministrador extends javax.swing.JFrame {
 
         jButton3.setBackground(new java.awt.Color(0, 139, 116));
         jButton3.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 14)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("Registrar chofer");
         jButton3.setActionCommand("");
         jButton3.setBorder(null);
         jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 100, 470, 40));
 
         jButton4.setBackground(new java.awt.Color(0, 139, 116));
         jButton4.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 14)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(255, 255, 255));
         jButton4.setText("Registrar vehiculo");
         jButton4.setActionCommand("");
         jButton4.setBorder(null);
@@ -76,7 +78,6 @@ public class MenuAdministrador extends javax.swing.JFrame {
 
         jButton5.setBackground(new java.awt.Color(0, 139, 116));
         jButton5.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 14)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(255, 255, 255));
         jButton5.setText("Listar viaje");
         jButton5.setActionCommand("");
         jButton5.setBorder(null);
@@ -85,7 +86,6 @@ public class MenuAdministrador extends javax.swing.JFrame {
 
         jButton6.setBackground(new java.awt.Color(0, 139, 116));
         jButton6.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 14)); // NOI18N
-        jButton6.setForeground(new java.awt.Color(255, 255, 255));
         jButton6.setText("Aprobar viaje");
         jButton6.setActionCommand("");
         jButton6.setBorder(null);
@@ -94,7 +94,6 @@ public class MenuAdministrador extends javax.swing.JFrame {
 
         jButton2.setBackground(new java.awt.Color(0, 139, 116));
         jButton2.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 14)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Registrar Secretaria");
         jButton2.setActionCommand("");
         jButton2.setBorder(null);
@@ -115,6 +114,11 @@ public class MenuAdministrador extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+       new RegistrarChofer();
+       
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments

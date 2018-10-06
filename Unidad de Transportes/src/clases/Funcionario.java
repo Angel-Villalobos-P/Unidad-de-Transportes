@@ -6,15 +6,17 @@ public class Funcionario {
     private String username;
     private String telefono;
     private String password;
+    private String correo;
    
     
 
-    public Funcionario(String nombreCompleto, String departamento, String username, String telefono, String password) {
+    public Funcionario(String nombreCompleto, String departamento, String username, String telefono, String password,String correo) {
         this.nombreCompleto = nombreCompleto;
         this.departamento = departamento;
         this.username = username;
         this.telefono = telefono;
         this.password = password;
+        this.correo=correo;
         
     }
 
@@ -57,5 +59,13 @@ public class Funcionario {
 
     public void setPassword(String pPassword) {
         password = pPassword;
+    }
+
+    public String getCorreo() {
+        return correo;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
     }
 }
