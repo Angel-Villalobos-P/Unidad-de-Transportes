@@ -11,10 +11,11 @@ public class Empresa {
     private String telefono;
     private Direccion direccion;
 
-    public Empresa(String razonSocial, String cedulaJuridica, String telefono) {
+    public Empresa(String razonSocial, String cedulaJuridica, String telefono,Direccion direccion) {
         this.razonSocial = razonSocial;
         this.cedulaJuridica = cedulaJuridica;
         this.telefono = telefono;
+        this.direccion=direccion;
         
     }
 

@@ -18,13 +18,14 @@ public final class Mantenimiento {
     private boolean tipoServicio;
     private Empresa empresa;
 
-    public Mantenimiento(String ideServicio, String fechaInicio, String fechaFinal, float monto, String actividad, boolean tipoServicio) {
+    public Mantenimiento(String ideServicio, String fechaInicio, String fechaFinal, float monto, String actividad, boolean tipoServicio,Empresa empresa) {
         this.ideServicio = ideServicio;
         this.fechaInicio = fechaInicio;
         this.fechaFinal = fechaFinal;
         this.monto = monto;
         this.actividad = actividad;
         this.tipoServicio = tipoServicio;
+        this.empresa=empresa;
     }
     
     public String getIdeServicio() {
