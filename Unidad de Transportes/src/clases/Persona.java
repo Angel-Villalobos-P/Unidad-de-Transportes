@@ -17,6 +17,7 @@ public class Persona {
         this.cedula = cedula;
         this.correo = correo;
         this.telefono = telefono;
+        this.direccion=direccion;
     }
 
     public String getNombre() {

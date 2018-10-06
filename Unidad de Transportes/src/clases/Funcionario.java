@@ -1,32 +1,30 @@
 package clases;
-import java.util.ArrayList;
 
 public class Funcionario {
-    private String nombreCompleo;
+    private String nombreCompleto;
     private String departamento;
     private String username;
     private String telefono;
     private String password;
-    private String tipo;
-    private ArrayList<Funcionario> administrador;
-    private ArrayList<Funcionario> secretaria;
+   
+    
 
-    public Funcionario(String nombreCompleo, String departamento, String username, String telefono, String password, String tipo) {
-        this.nombreCompleo = nombreCompleo;
+    public Funcionario(String nombreCompleto, String departamento, String username, String telefono, String password) {
+        this.nombreCompleto = nombreCompleto;
         this.departamento = departamento;
         this.username = username;
         this.telefono = telefono;
         this.password = password;
-        this.tipo = tipo;
+        
     }
 
     
-    public String getNombreCompleo() {
-        return nombreCompleo;
+    public String getNombreCompleto() {
+        return nombreCompleto;
     }
 
-    public void setNombreCompleo(String pNombreCompleto) {
-        nombreCompleo = pNombreCompleto;
+    public void setNombreCompleto(String pNombreCompleto) {
+        nombreCompleto = pNombreCompleto;
     }
 
     public String getDepartamento() {
@@ -59,29 +57,5 @@ public class Funcionario {
 
     public void setPassword(String pPassword) {
         password = pPassword;
-    }
-
-    public String getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(String pTipo) {
-        tipo = pTipo;
-    }
-
-    public ArrayList<Funcionario> getAdministrador() {
-        return administrador;
-    }
-
-    public void setAdministrador(Funcionario pAdministrador) {
-        administrador.add(pAdministrador);
-    }
-
-    public ArrayList<Funcionario> getSecretaria() {
-        return secretaria;
-    }
-
-    public void setSecretaria(Funcionario pSecretaria) {
-        secretaria.add(pSecretaria);
     }
 }
