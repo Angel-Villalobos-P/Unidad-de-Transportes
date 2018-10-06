@@ -123,18 +123,24 @@ public class LogIn extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        
         usernameIgresado = this.jTextField1.getText();
-        passwordIngresado = this.jPasswordField1.getSelectedText();
+        passwordIngresado = String.valueOf(this.jPasswordField1.getPassword());
         //ReaderJSON readerJSON = new ReaderJSON();
+        System.out.println(passwordIngresado);
        try {
            js = readerJSON.Reader("Secretario");
            credenciales = new ValidacionCredenciales(usernameIgresado, passwordIngresado, js);
+           credenciales.aceptarUsuario();
+           System.out.println(credenciales.aceptarUsuario());
            
-           if (credenciales.aceptarUsuario()==true){
-               JOptionPane.showMessageDialog(null, "Aceptado");
+           if (credenciales.aceptarUsuario()){
+               //JOptionPane.showMessageDialog(null, "Aceptado");
+               MenuSecretaria ms = new MenuSecretaria();
+               ms.setVisible(true);
+               this.dispose();
+              
            } else{
-               JOptionPane.showMessageDialog(null, "Usurio incorrecto");
+               JOptionPane.showMessageDialog(null, "Usuario incorrecto");
            }
        } catch (IOException ex) {
            Logger.getLogger(LogIn.class.getName()).log(Level.SEVERE, null, ex);
