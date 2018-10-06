@@ -9,10 +9,10 @@ import com.google.gson.JsonArray;
 import funciones.ReaderJSON;
 import funciones.ValidacionCredenciales;
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import ui.MenuAdministrador;
 import ui.MenuSecretaria;
 
 /**
@@ -21,7 +21,7 @@ import ui.MenuSecretaria;
  */
 public class LogIn extends javax.swing.JFrame {
     
-   private String usernameIgresado; 
+   private String usernameIngresado; 
    private String passwordIngresado;
    private ValidacionCredenciales credenciales;
    private JsonArray js = new JsonArray();
@@ -81,29 +81,35 @@ public class LogIn extends javax.swing.JFrame {
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 340, 160, 27));
 
         jSeparator1.setBackground(new java.awt.Color(0, 139, 116));
-        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 280, 140, -1));
+        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 280, 120, -1));
 
         jLabel3.setIcon(new javax.swing.ImageIcon("/Users/angel/Downloads/icons8-administrador-del-hombre-24.png")); // NOI18N
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 180, -1, 38));
 
         jTextField1.setBackground(new java.awt.Color(33, 33, 33));
+        jTextField1.setForeground(new java.awt.Color(255, 255, 255));
         jTextField1.setBorder(null);
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 180, 140, 20));
+        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 180, 120, 20));
 
         jLabel4.setIcon(new javax.swing.ImageIcon("/Users/angel/Downloads/icons8-candado-2-24.png")); // NOI18N
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 260, 30, 30));
 
         jSeparator2.setBackground(new java.awt.Color(0, 139, 116));
-        jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 200, 140, 10));
+        jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 200, 120, 10));
 
         jPasswordField1.setBackground(new java.awt.Color(33, 33, 33));
+        jPasswordField1.setForeground(new java.awt.Color(255, 255, 255));
         jPasswordField1.setText("jPasswordField1");
         jPasswordField1.setBorder(null);
-        jPanel1.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 260, 140, 20));
+        jPanel1.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 260, 120, 20));
 
+        jLabel2.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Password:");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 240, -1, -1));
 
+        jLabel5.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Username:");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 160, -1, -1));
 
@@ -119,19 +125,21 @@ public class LogIn extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        usernameIgresado = this.jTextField1.getText();
+
+        usernameIngresado = this.jTextField1.getText();
         passwordIngresado = String.valueOf(this.jPasswordField1.getPassword());
-        //ReaderJSON readerJSON = new ReaderJSON();
-        System.out.println(passwordIngresado);
+        System.out.println(usernameIngresado + passwordIngresado);
+        if(!(usernameIngresado.equals("administrador") && passwordIngresado.equals("123Admin!"))){
+        //System.out.println(passwordIngresado);
        try {
            js = readerJSON.Reader("Secretario");
-           credenciales = new ValidacionCredenciales(usernameIgresado, passwordIngresado, js);
-           credenciales.aceptarUsuario();
-           System.out.println(credenciales.aceptarUsuario());
+           credenciales = new ValidacionCredenciales(usernameIngresado, passwordIngresado, js);
+           //credenciales.aceptarUsuario();
+           //System.out.println(credenciales.aceptarUsuario());
            
            if (credenciales.aceptarUsuario()){
                //JOptionPane.showMessageDialog(null, "Aceptado");
@@ -145,6 +153,11 @@ public class LogIn extends javax.swing.JFrame {
        } catch (IOException ex) {
            Logger.getLogger(LogIn.class.getName()).log(Level.SEVERE, null, ex);
        }
+        } else{
+            MenuAdministrador menuAdmi = new MenuAdministrador();
+            menuAdmi.setVisible(true);
+            this.dispose();
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
