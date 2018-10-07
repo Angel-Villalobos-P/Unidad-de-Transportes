@@ -4,10 +4,12 @@ package funciones;
  *
  * @author M Fer
  */
+
 import java.util.Properties;
 import javax.mail.Message;
 import javax.mail.MessagingException;
 import javax.mail.PasswordAuthentication;
+
 import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
@@ -31,6 +33,7 @@ public class EnviarCorreo {
 
         Session session = Session.getInstance(props,
                 new javax.mail.Authenticator() {
+                    @Override
                     protected PasswordAuthentication getPasswordAuthentication() {
                         return new PasswordAuthentication(Username, Password);
                     }
