@@ -16,6 +16,9 @@ public class UnidadDeTransportes {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        LogIn log = new LogIn();
+        log.setVisible(true);
     }
     
 }
