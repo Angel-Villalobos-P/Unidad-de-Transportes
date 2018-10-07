@@ -74,6 +74,11 @@ public class MenuAdministrador extends javax.swing.JFrame {
         jButton4.setActionCommand("");
         jButton4.setBorder(null);
         jButton4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 160, 470, 40));
 
         jButton5.setBackground(new java.awt.Color(0, 139, 116));
@@ -116,9 +121,18 @@ public class MenuAdministrador extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-       new RegistrarChofer();
+       RegistrarChofer nuevoChofer = new RegistrarChofer();
+       nuevoChofer.setVisible(true);
+       this.dispose();
        
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        RegistrarVehiculo nuevo = new RegistrarVehiculo();
+        nuevo.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
