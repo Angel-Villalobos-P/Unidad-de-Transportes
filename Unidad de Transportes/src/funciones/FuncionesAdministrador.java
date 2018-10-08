@@ -113,7 +113,7 @@ public class FuncionesAdministrador {
 //JsonObject pasajero = pasajeros.get(elemento).getAsJsonObject();
             
             if(pNombreCompleto==p.getNombreCompleto() ){
-                return ("Error, existe una coincidencia los datos de una secreetaria previamente registrada");
+                return ("Error, existe una coincidencia con los datos de una secreetaria previamente registrada");
             }
         }
         if(validarContraseña(pPassword)==true){
@@ -124,7 +124,7 @@ public class FuncionesAdministrador {
             datos.EscribirJson("Secretaria",secretarias);
             
         } 
-       return"Se creo exitosamente";
+       return"Se creó exitosamente";
     }
     
    
