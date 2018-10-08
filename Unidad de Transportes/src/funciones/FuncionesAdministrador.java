@@ -83,23 +83,26 @@ public class FuncionesAdministrador {
         return viajesEncontrados;
     }
     
-    public  ArrayList aprobarSolicitudDeViaje(String elementoBusqueda) throws IOException{
+    public  String aprobarSolicitudDeViaje(Viaje viajePendiente) throws IOException{
         ReaderJSON listaViajes=new ReaderJSON();
-        JsonArray viajes= listaViajes.Reader("Viajes");
-        ArrayList nuevaLista=new ArrayList();
+        JsonArray choferes= listaViajes.Reader("Choferes");
+        JsonArray vehiculo= listaViajes.Reader("Vehiculos");
+       
+        Gson gson=new Gson();
+        int sizeChof=choferes.size();
+        int sizeVehi= vehiculo.size();
+        int numero = (int) (Math.random() * sizeChof) + 1;
+        int num = (int) (Math.random() * sizeVehi) + 1;
+        Persona choferElegido = gson.fromJson(choferes.get(numero), Persona.class);
+        Vehiculo vehiculoAsignado=gson.fromJson(choferes.get(num), Vehiculo.class);
         
-        for(int elemento=0; elemento <= viajes.size()-1; elemento++){
-            Gson g = new Gson();
-            Viaje p = g.fromJson(viajes.get(elemento), Viaje.class);
-            //PASAr como parametro algo que nos filtre los viajs 
-             if(elementoBusqueda==p.getDestino()){
-               nuevaLista.add(p);
-             }
-             
-             }
-        return nuevaLista;
+        viajePendiente.setEstado("Aprobado");
+        viajePendiente.setChofer(choferElegido.getNombre()+choferElegido.getTelefono());
+        viajePendiente.setVehiculo(vehiculoAsignado.getPlaca());
         
+        return"Este viaje ha sido aprobado";
     }
+            
     
     public String registrarNuevaSecretaria(String pNombreCompleto, String pDepartamento, String pUsername, String pTelefono, String pPassword,String pCorreo) throws IOException{
         ReaderJSON datos=new ReaderJSON();
