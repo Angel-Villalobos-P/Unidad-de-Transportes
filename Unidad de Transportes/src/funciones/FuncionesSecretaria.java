@@ -68,7 +68,7 @@ public class FuncionesSecretaria {
     
     public String cancelarSolicitudDeViaje(Viaje pViaje){
         pViaje.setEstado("Cancelado");
-        return "El viaje se ha cancelado conèxito.";
+        return "El viaje se ha cancelado con éxito.";
         
     }
     
