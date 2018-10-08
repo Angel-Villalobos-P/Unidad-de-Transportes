@@ -119,4 +119,9 @@ public final class Viaje {
     public void setFechaSolicitud(Date pFechaSolicitud) {
         this.fechaSolicitud = pFechaSolicitud;
     }
+
+    public String getDetalles(){
+        return  "Salida: " +getPuntoSalida()+"Llegada: "+ getDestino()+ "Hora de salida: "+ getHoraInicio();
+
+    }
 }
