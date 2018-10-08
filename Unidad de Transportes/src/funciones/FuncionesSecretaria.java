@@ -7,6 +7,7 @@ package funciones;
 
 import clases.Direccion;
 import clases.Persona;
+import clases.Viaje;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import java.io.IOException;
@@ -44,8 +45,8 @@ public class FuncionesSecretaria {
 
     }
 
-    public void solicitarServicioDeViaje(String puntoSalida, String fechaInicio, String horaInicio, String horaFinal, String destino, String chofer, int kmInicial, int kmFinal){
-    	String estado="En confección"
+    public String solicitarServicioDeViaje(String puntoSalida, String fechaInicio, String horaInicio, String horaFinal, String destino, String chofer, int kmInicial, int kmFinal){
+    	String estado="En confecciï¿½n"
     	Viaje nuevoViaje= new Viaje(puntoSalida,fechaInicio, horaInicio, horaFinal,destino,chofer,kmInicial, kmFinal);    
     	//Agregar pasajeros falta 
     	ReaderJSON datos=new ReaderJSON();
@@ -65,7 +66,9 @@ public class FuncionesSecretaria {
         
     }
     
-    public void cancelarSolicitudDeViaje(){
+    public String cancelarSolicitudDeViaje(Viaje pViaje){
+        pViaje.setEstado("Cancelado");
+        return "El viaje se ha cancelado conÃ¨xito.";
         
     }
     
