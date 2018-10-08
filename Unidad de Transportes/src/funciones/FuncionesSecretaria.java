@@ -44,8 +44,17 @@ public class FuncionesSecretaria {
 
     }
 
-    public void solicitarServicioDeViaje(){
-        
+    public void solicitarServicioDeViaje(String puntoSalida, String fechaInicio, String horaInicio, String horaFinal, String destino, String chofer, int kmInicial, int kmFinal){
+    	String estado="En confección"
+    	Viaje nuevoViaje= new Viaje(puntoSalida,fechaInicio, horaInicio, horaFinal,destino,chofer,kmInicial, kmFinal);    
+    	//Agregar pasajeros falta 
+    	ReaderJSON datos=new ReaderJSON();
+        JsonArray viajes= datos.Reader("Viajes");
+        Gson gson=new Gson();
+        String obj = gson.toJson(nuevoViaje);
+        viajes.add(obj);
+        datos.EscribirJson("Viajes",viajes);
+        return "El viaje se ha registrado con Ã©xito";
     }
     
     public void listarSolicitudesDeViaje(){
