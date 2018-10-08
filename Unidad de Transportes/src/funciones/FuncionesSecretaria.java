@@ -11,6 +11,8 @@ import clases.Viaje;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import java.io.IOException;
+import java.util.*;
+import java.lang.*;
 
 /**
  *
@@ -61,9 +63,23 @@ public class FuncionesSecretaria {
     public void listarSolicitudesDeViaje(){
         
     }
-    
-    public void consultarDetalleDeSolicitud(){
-        
+
+    public String consultarDetalleDeSolicitud(Viaje pViaje){
+        ArrayList<Viaje> viajes1= new ArrayList();
+        ReaderJSON datos=new ReaderJSON();
+        JsonArray viajes= datos.Reader("Viajes");
+        for(int i=0; i<= viajes.size()-1; i++){
+            if(viajes.get(i)=="Viajes"){
+                viajes1.add(viajes.get(i));
+            }
+        }
+        for(int i=0; i<= viajes1.size()-1; i++){
+            if(viajes1.get(i)== pViaje){
+                return pViaje.getDetalles();
+
+            }
+        }
+        return "";
     }
     
     public String cancelarSolicitudDeViaje(Viaje pViaje){
