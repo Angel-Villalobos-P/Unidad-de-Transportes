@@ -10,7 +10,7 @@ import clases.Persona;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import java.io.IOException;
-
+import clases.Viaje;
 /**
  *
  * @author M Fer
@@ -44,9 +44,9 @@ public class FuncionesSecretaria {
 
     }
 
-    public void solicitarServicioDeViaje(String puntoSalida, String fechaInicio, String horaInicio, String horaFinal, String destino, String chofer, int kmInicial, int kmFinal){
-    	String estado="En confección"
-    	Viaje nuevoViaje= new Viaje(puntoSalida,fechaInicio, horaInicio, horaFinal,destino,chofer,kmInicial, kmFinal);    
+    public String solicitarServicioDeViaje(String puntoSalida, String fechaInicio, String horaInicio, String horaFinal, String destino, int kmInicial, int kmFinal) throws IOException{
+    	String estado="En confecciÃ³n";
+    	Viaje nuevoViaje= new Viaje(puntoSalida,fechaInicio, horaInicio, horaFinal,destino,kmInicial, kmFinal,estado);    
     	//Agregar pasajeros falta 
     	ReaderJSON datos=new ReaderJSON();
         JsonArray viajes= datos.Reader("Viajes");
@@ -58,6 +58,7 @@ public class FuncionesSecretaria {
     }
     
     public void listarSolicitudesDeViaje(){
+        
         
     }
     

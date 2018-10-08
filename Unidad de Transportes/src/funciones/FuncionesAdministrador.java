@@ -7,7 +7,6 @@ package funciones;
 import clases.*;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
-import static com.sun.javafx.fxml.expression.Expression.or;
 import java.io.IOException;
 import java.util.ArrayList;
 /*
@@ -118,26 +117,34 @@ public class FuncionesAdministrador {
         }
         if(validarContraseña(pPassword)==true){
             Funcionario nuevoFuncionario=new Funcionario(pNombreCompleto,pDepartamento,pUsername,pTelefono,pPassword,pCorreo);
+            String mensaje=nuevoFuncionario.getPassword()+nuevoFuncionario.getUsername();
+            EnviarCorreo correo=new EnviarCorreo(mensaje,pCorreo,"Datos para ingresar ");
+            correo.SendMail();
             
             Gson gson=new Gson();
             String obj = gson.toJson(nuevoFuncionario);
+            secretarias.add(obj);
             datos.EscribirJson("Secretaria",secretarias);
-            
+            return"Se creó exitosamente";
         } 
-       return"Se creó exitosamente";
+        else{
+            return"Error en la contraseña";
+        }
     }
     
    
-    /*public boolean validarContraseña(String password){
+    public boolean validarContraseña(String password){
         
         if (password.length()<8 || password.length()>12){
             return false;
         }
-        if (password.indexOf("!") || password.indexOf("#") || password.indexOf("$")|| password.indexOf("@")==-1){
+        if (password.indexOf("!")==-1 || password.indexOf("#")==-1 || password.indexOf("$")==-1|| password.indexOf("@")==-1){
             return false;
         }
-            Da error y falta completar
-    }*/
+        else{
+            return true;
+        }    
+    }
   
     
     

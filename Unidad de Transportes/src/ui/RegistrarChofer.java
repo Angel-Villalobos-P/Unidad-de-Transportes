@@ -79,6 +79,7 @@ public class RegistrarChofer extends javax.swing.JFrame {
         jTextField14 = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
         jTextField15 = new javax.swing.JTextField();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -168,14 +169,13 @@ public class RegistrarChofer extends javax.swing.JFrame {
         jPanel1.add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 260, 140, 20));
 
         jButton1.setText("Registrar");
-        jButton1.setActionCommand("Registrar");
         jButton1.setBorder(null);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(327, 368, 167, 30));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(577, 380, 150, 30));
         jPanel1.add(jTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 140, 140, 20));
         jPanel1.add(jTextField14, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 300, 140, 20));
 
@@ -184,6 +184,9 @@ public class RegistrarChofer extends javax.swing.JFrame {
         jLabel16.setText("Señas:");
         jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 50, 82, -1));
         jPanel1.add(jTextField15, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 50, 140, 20));
+
+        jButton2.setText("Regresar");
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 380, 150, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -263,6 +266,7 @@ public class RegistrarChofer extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

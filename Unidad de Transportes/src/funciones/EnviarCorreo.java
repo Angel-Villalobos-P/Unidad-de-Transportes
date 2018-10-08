@@ -17,11 +17,18 @@ import javax.mail.internet.MimeMessage;
 
 
 public class EnviarCorreo {
-    private static String Username="xxxx@gmail.com";
-    private static String Password="xxxxx";
-    String Mensage="HOLA";
-    String To="ferlanza14@gmail.com";
-    String Subject="Prueba";
+    private static String Username="ferlanza14@gmail.com";
+    private static String Password="";
+    String Mensage;
+    String To;
+    String Subject;
+
+    public EnviarCorreo(String Mensage, String To, String Subject) {
+        this.Mensage = Mensage;
+        this.To = To;
+        this.Subject = Subject;
+       
+    }
   
 
  public void SendMail() {
