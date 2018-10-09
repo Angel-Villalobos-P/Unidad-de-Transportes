@@ -7,13 +7,10 @@ package funciones;
 
 import clases.Direccion;
 import clases.Persona;
-import clases.Viaje;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import java.io.IOException;
-import java.util.*;
-import java.lang.*;
-
+import clases.Viaje;
 /**
  *
  * @author M Fer
@@ -47,9 +44,9 @@ public class FuncionesSecretaria {
 
     }
 
-    public String solicitarServicioDeViaje(String puntoSalida, String fechaInicio, String horaInicio, String horaFinal, String destino, String chofer, int kmInicial, int kmFinal){
-    	String estado="En confecci�n"
-    	Viaje nuevoViaje= new Viaje(puntoSalida,fechaInicio, horaInicio, horaFinal,destino,chofer,kmInicial, kmFinal);    
+    public String solicitarServicioDeViaje(String puntoSalida, String fechaInicio, String horaInicio, String horaFinal, String destino, int kmInicial, int kmFinal) throws IOException{
+    	String estado="En confección";
+    	Viaje nuevoViaje= new Viaje(puntoSalida,fechaInicio, horaInicio, horaFinal,destino,kmInicial, kmFinal,estado);    
     	//Agregar pasajeros falta 
     	ReaderJSON datos=new ReaderJSON();
         JsonArray viajes= datos.Reader("Viajes");
@@ -62,29 +59,14 @@ public class FuncionesSecretaria {
     
     public void listarSolicitudesDeViaje(){
         
-    }
-
-    public String consultarDetalleDeSolicitud(Viaje pViaje){
-        ArrayList<Viaje> viajes1= new ArrayList();
-        ReaderJSON datos=new ReaderJSON();
-        JsonArray viajes= datos.Reader("Viajes");
-        for(int i=0; i<= viajes.size()-1; i++){
-            if(viajes.get(i)=="Viajes"){
-                viajes1.add(viajes.get(i));
-            }
-        }
-        for(int i=0; i<= viajes1.size()-1; i++){
-            if(viajes1.get(i)== pViaje){
-                return pViaje.getDetalles();
-
-            }
-        }
-        return "";
+        
     }
     
-    public String cancelarSolicitudDeViaje(Viaje pViaje){
-        pViaje.setEstado("Cancelado");
-        return "El viaje se ha cancelado con éxito.";
+    public void consultarDetalleDeSolicitud(){
+        
+    }
+    
+    public void cancelarSolicitudDeViaje(){
         
     }
     

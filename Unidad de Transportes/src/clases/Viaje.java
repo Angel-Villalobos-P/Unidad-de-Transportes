@@ -20,8 +20,9 @@ public final class Viaje {
     private int kmFinal;
     private String estado;
     private Date fechaSolicitud;
+    private String vehiculo;
 
-    public Viaje(String puntoSalida, String fechaInicio, String horaInicio, String horaFinal, String destino, String chofer, int kmInicial, int kmFinal, String estado) {
+    public Viaje(String puntoSalida, String fechaInicio, String horaInicio, String horaFinal, String destino,int kmInicial, int kmFinal, String estado) {
         this.puntoSalida = puntoSalida;
         this.fechaInicio = fechaInicio;
         this.horaInicio = horaInicio;
@@ -30,6 +31,8 @@ public final class Viaje {
         this.kmInicial = kmInicial;
         this.kmFinal = kmFinal;
         this.estado = estado;
+        this.chofer="Sin asignar";
+        this.vehiculo="Sin asignar";
     }
     
     public String getPuntoSalida() {
@@ -85,7 +88,7 @@ public final class Viaje {
     }
 
     public void setChofer(String chofer) {
-        this.chofer = chofer; // Sacar el chofer de los registrados
+        this.chofer = chofer; 
     }
 
     public int getKmInicial() {
@@ -120,8 +123,12 @@ public final class Viaje {
         this.fechaSolicitud = pFechaSolicitud;
     }
 
-    public String getDetalles(){
-        return  "Salida: " +getPuntoSalida()+"Llegada: "+ getDestino()+ "Hora de salida: "+ getHoraInicio();
-
+    public String getVehiculo() {
+        return vehiculo;
     }
+
+    public void setVehiculo(String vehiculo) {
+        this.vehiculo = vehiculo;
+    }
+    
 }
